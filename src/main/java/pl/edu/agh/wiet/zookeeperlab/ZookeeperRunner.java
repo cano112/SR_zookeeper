@@ -47,10 +47,8 @@ public class ZookeeperRunner implements Runnable, Watcher,  ZookeeperDataEventLi
     }
 
     public void changed(byte[] data) {
-        if (data == null) {
-            stopProcess();
-        } else {
-            stopProcess();
+        stopProcess();
+        if (data != null) {
             startProcess();
         }
     }
